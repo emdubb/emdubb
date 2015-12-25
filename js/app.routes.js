@@ -9,13 +9,8 @@
 
   function AppRoutes($stateProvider, $urlRouterProvider) {
     $stateProvider
-      // setup an abstract state for the menu directive
-      .state('app', {
-        url: '/app',
-        abstract: true,
-        templateUrl: 'templates/menu.html'
-      })
-      .state('app.home',{
+
+      .state('home',{
         url: '/',
         views: {
           'menuContent': {
@@ -25,7 +20,7 @@
           }
         }
       })
-      .state('app.river', {
+      .state('river', {
         url: '/uptheriver',
         views: {
           'menuContent': {
