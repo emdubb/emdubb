@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/main.css" type="text/css">
-  <link rel="stylesheet" href="/css/animate.css">
 
   <!--FAVICON-->
   <link rel="apple-touch-icon" sizes="57x57" href="img/favicon.ico/apple-icon-57x57.png">
@@ -34,7 +33,8 @@
 
 </head>
 <body ng-app="emdubb">
-  <nav class="navbar navbar-default navbar-static-top navbar-inverse">
+<a id="top"></a>
+  <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -47,9 +47,9 @@
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <li class="text-uppercase"><a href="#">About</a></li>
-          <li class="text-uppercase"><a href="#">Work</a></li>
-          <li class="text-uppercase"><a href="#">Contact</a></li>
+          <li class="text-uppercase"><a href="#about">About</a></li>
+          <li class="text-uppercase"><a href="#work">Work</a></li>
+          <li class="text-uppercase"><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -59,23 +59,18 @@
     <!-- PAGE TEMPLATES -->
   </main>
 
-  <div class="circle-icons top">
-    <a href="index.html" target="blank" title="Back to top">
+  <div class="circle-icons top hvr-grow">
+    <a href="#top" target="blank" title="Back to top">
     <i class="fa fa-angle-up"></i>
     </a>
   </div>
 
-  <footer class="footer">
-    <div class="footer-bottom">
-      <div class="container">
-        <p class="pull-left">© 2016 EM DUBB. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
+
 
   <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+  <script src="/js/main.js"></script>
   <script src="/js/app.module.js"></script>
   <script src="/js/app.routes.js"></script>
   <script src="/js/work.dataservice.js"></script>

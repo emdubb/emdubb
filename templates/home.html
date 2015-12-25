@@ -4,12 +4,13 @@
       <h1 class="text-uppercase">Designing an
       <div class="strong">Experience</div></h1>
       <h3>Creating beatiful user experiences in both print and digital platforms. </h3>
-      <a class="btn" href="#" role="button">Let's get nerdy! &nbsp <i class="fa fa-angle-down"></i></a>
+      <a class="btn hvr-grow" href="#about" role="button">Let's get nerdy! &nbsp <i class="fa fa-angle-down"></i></a>
     </div>
   </div>
 </section>
 
 <section id="categories">
+<a id="about"></a>
   <div class="container">
     <div class="row text-center">
       <div class="col-md-3 col-sm-6 col-xs-12 category">
@@ -56,15 +57,16 @@
 <section class="break"></section>
 
 <section id="work">
+<a name="work"></a>
   <div class="container">
     <div class="text-center filter-buttons">
-      <button class="filter btn" ng-click="vm.setGroup(1)">Development</button>
-      <button class="filter btn" ng-click="vm.setGroup(2)">Interactive</button>
-      <button class="filter btn" ng-click="vm.setGroup(3)">Print</button>
-      <button class="filter btn" ng-click="vm.setGroup(4)">All</button>
+      <button class="filter btn hvr-grow" ng-click="vm.setGroup(1)">Development</button>
+      <button class="filter btn hvr-grow" ng-click="vm.setGroup(2)">Interactive</button>
+      <button class="filter btn hvr-grow" ng-click="vm.setGroup(3)">Print</button>
+      <button class="filter btn hvr-grow" ng-click="vm.setGroup(4)">All</button>
     </div>
     <div class="row">
-      <div class="col-md-4 col-sm-6" ng-repeat="item in vm.work | workFilter:vm.selectedGroup">
+      <div class="col-md-3 col-sm-6" ng-repeat="item in vm.work | workFilter:vm.selectedGroup">
         <div class="work-item">
           <img src="{{item.thumbUrl}}" class="image-responsive" alt="Work item">
           <h2 class="work-title text-uppercase text-center">{{item.title}}</h2>
@@ -77,33 +79,34 @@
 <section class="break"></section>
 
 <section id="contact">
+<a name="contact"></a>
   <div class="container">
     <div class="row">
       <div class="col-md-6 category">
         <h2 class="text-transform">Say Hello!</h2>
         <p>Who doesn't love a friendly hello? Email me or say hi through social media with any questions, comments, concerns, haikus, jokes, etc. Talk to you soon!</p>
         <ul class="list-row">
-          <li class="circle-icons">
+          <li class="circle-icons hvr-grow">
             <a href="https://github.com/emdubb/" target="blank" title="Follow on Github">
             <i class="fa fa-github"></i>
             </a>
           </li>
-          <li class="circle-icons">
+          <li class="circle-icons hvr-grow">
             <a href="https://www.behance.net/emdubb" target="blank" title="Follow on Behance">
             <i class="fa fa-behance"></i>
             </a>
           </li>
-          <li class="circle-icons">
+          <li class="circle-icons hvr-grow">
             <a href="http://www.twitter.com/EMDUBBdesign" target="blank" title="Follow on Twitter">
             <i class="fa fa-twitter"></i>
             </a>
           </li>
-          <li class="circle-icons">
+          <li class="circle-icons hvr-grow">
             <a href="http://www.instagram.com/EM.DUBB" target="blank" title="Follow on Instagram">
             <i class="fa fa-instagram"></i>
             </a>
           </li>
-          <li class="circle-icons">
+          <li class="circle-icons hvr-grow">
             <a href="http://www.linkedin.com/in/emdubb" target="blank" title="Follow on LinkedIn">
             <i class="fa fa-linkedin"></i>
             </a>
@@ -124,9 +127,17 @@
           <div class="form-group">
             <textarea class="form-control" id="input-message" rows="5" placeholder="Message"></textarea>
           </div>
-          <button type="submit" class="btn btn-default text-uppercase">Send &nbsp <i class="fa fa-envelope-o"></i></button>
+          <button type="submit" class="btn btn-default text-uppercase hvr-grow">Send &nbsp <i class="fa fa-envelope-o"></i></button>
         </form>
       </div>
     </div>
   </div>
 </section>
+
+<footer class="footer">
+  <div class="footer-bottom">
+    <div class="container">
+      <p class="pull-left">© 2016 EM DUBB. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
