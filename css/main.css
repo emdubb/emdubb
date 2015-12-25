@@ -6,6 +6,13 @@ nav {
   font-size: .8em;
   padding: 0 5%;
 }
+
 .navbar-brand img {
   width: 50%;
+}
+
+@media (max-width: 800px) {
+  nav {
+    padding: 0;
+  }
 }
