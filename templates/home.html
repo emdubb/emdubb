@@ -4,7 +4,7 @@
       <h1 class="text-uppercase">Designing an
       <div class="strong">Experience</div></h1>
       <h3>Creating beatiful user experiences in both print and digital platforms. </h3>
-      <a class="btn btn-primary text-uppercase" href="#" role="button">Let's get nerdy! &nbsp <i class="fa fa-angle-down"></i></a>
+      <a class="btn" href="#" role="button">Let's get nerdy! &nbsp <i class="fa fa-angle-down"></i></a>
     </div>
   </div>
 </section>
@@ -43,11 +43,11 @@
 <section id="about">
   <div class="container">
     <div class="col-md-6 category">
-      <h2>Behind the Scenes</h2>
+      <h2 class="text-uppercase">Behind the Scenes</h2>
       <p>Form and function. The EM DUBB focus is on finding a harmonious balance between functionality and beauty. What drives the design is a desire to create an optimal experience. By using an explorative approach EM DUBB will work with you every step of the way and venture into new and creative territory.</p>
     </div>
     <div class="col-md-6 category">
-      <h2>Meet the Madness</h2>
+      <h2 class="text-uppercase">Meet the Madness</h2>
       <p>Hey, there! My name’s Melissa and I am the designer behind EM DUBB. I’m a certified nerd and I speak geek. Geek, you ask? Yes, I am fluent in the world of interactive design and programming. I’ll build your design experience from the bottom up whether that means typing code, building branding, or designing user interactions. Let's build something together.</p>
     </div>
   </div>
@@ -57,7 +57,20 @@
 
 <section id="work">
   <div class="container">
-
+    <div class="text-center filter-buttons">
+      <button class="filter btn">Development</button>
+      <button class="filter btn">Interactive</button>
+      <button class="filter btn">Print</button>
+      <button class="filter btn">All</button>
+    </div>
+    <div class="row">
+      <div class="col-md-4 col-sm-6" ng-repeat="item in vm.work">
+        <div class="work-item">
+          <img src="{{item.thumbUrl}}" class="image-responsive" alt="Work item">
+          <h2 class="work-title text-uppercase text-center">{{item.title}}</h2>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -67,7 +80,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6 category">
-        <h2>Say Hello!</h2>
+        <h2 class="text-transform">Say Hello!</h2>
         <p>Who doesn't love a friendly hello? Email me or say hi through social media with any questions, comments, concerns, haikus, jokes, etc. Talk to you soon!</p>
         <ul class="list-row">
           <li class="circle-icons">

@@ -41,6 +41,12 @@ h3 {
   font-weight: 600;
 }
 
+.top {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
 .navbar-inverse {
   background-color: rgba(20, 20, 20, .8);
 }
@@ -58,7 +64,7 @@ h3 {
 }
 
 .btn {
-  font-size: .8em;
+  font-size: .9em;
   font-weight: 300;
   background-color: #0B5263;
   color: white;
@@ -71,6 +77,12 @@ h3 {
 
 .btn:hover {
   background-color: #073B47;
+  color: #f0f0f0;
+}
+
+.btn:focus {
+  outline: 0;
+  color: #f0f0f0;
 }
 
 .icon-o {
@@ -119,8 +131,36 @@ h3 {
 }
 
 #work {
-  height: 200px;
   background-color: white;
+}
+
+.filter-buttons {
+  margin: 4% 0;
+}
+
+.filter-buttons button {
+  margin: 0 5px;
+}
+
+.work-item {
+  z-index: 100;
+}
+
+.work-item img {
+  width: 100%;
+  z-index: 200;
+}
+
+.work-title {
+  position: relative;
+  margin-top: -40%;
+  margin-bottom: 40%;
+  z-index: 300;
+}
+
+.work-title {
+  color: white;
+  font-size: 2em;
 }
 
 #contact {
