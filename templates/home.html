@@ -58,13 +58,14 @@
 <section id="work">
   <div class="container">
     <div class="text-center filter-buttons">
-      <button class="filter btn">Development</button>
-      <button class="filter btn">Interactive</button>
-      <button class="filter btn">Print</button>
-      <button class="filter btn">All</button>
+      <button class="filter btn" ng-click="vm.setGroup(1)">Development</button>
+      <button class="filter btn" ng-click="vm.setGroup(2)">Interactive</button>
+      <button class="filter btn" ng-click="vm.setGroup(3)">Print</button>
+      <button class="filter btn" ng-click="vm.setGroup(4)">All</button>
     </div>
     <div class="row">
-      <div class="col-md-4 col-sm-6" ng-repeat="item in vm.work">
+      <div class="col-md-4 col-sm-6" ng-repeat="item in vm.work | workFilter:vm.selectedGroup">
+      <!-- <div class="col-md-4 col-sm-6" ng-repeat="item in vm.work"> -->
         <div class="work-item">
           <img src="{{item.thumbUrl}}" class="image-responsive" alt="Work item">
           <h2 class="work-title text-uppercase text-center">{{item.title}}</h2>

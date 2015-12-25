@@ -135,7 +135,11 @@ h3 {
 }
 
 .filter-buttons {
-  margin: 4% 0;
+  margin: 4% 4%;
+}
+
+.filter-buttons .btn {
+  width: 100px;
 }
 
 .filter-buttons button {
