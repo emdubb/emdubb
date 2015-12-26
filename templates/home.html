@@ -66,9 +66,11 @@
       <button class="filter btn hvr-grow" ng-click="vm.setGroup(4)">All</button>
     </div>
     <div class="row">
-      <div class="col-md-3 col-sm-6" ng-repeat="item in vm.work | workFilter:vm.selectedGroup">
-        <div class="work-item">
-          <img src="{{item.thumbUrl}}" class="image-responsive" alt="Work item">
+      <div class="col-md-3 col-sm-6 animate-repeat" ng-repeat="item in vm.work | workFilter:vm.selectedGroup">
+        <div class="work-item hvr-grow">
+          <div ng-init="itemsrc = item.thumbUrl" ng-mouseover="itemsrc = item.thumbUrlroll" ng-mouseout="itemsrc = item.thumbUrl">
+            <img ng-src="{{itemsrc}}" class="image-responsive work-image" alt="Work item"/>
+          </div>
           <h2 class="work-title text-uppercase text-center">{{item.title}}</h2>
         </div>
       </div>
@@ -86,31 +88,31 @@
         <h2 class="text-transform">Say Hello!</h2>
         <p>Who doesn't love a friendly hello? Email me or say hi through social media with any questions, comments, concerns, haikus, jokes, etc. Talk to you soon!</p>
         <ul class="list-row">
-          <li class="circle-icons hvr-grow">
-            <a href="https://github.com/emdubb/" target="blank" title="Follow on Github">
-            <i class="fa fa-github"></i>
-            </a>
-          </li>
-          <li class="circle-icons hvr-grow">
-            <a href="https://www.behance.net/emdubb" target="blank" title="Follow on Behance">
-            <i class="fa fa-behance"></i>
-            </a>
-          </li>
-          <li class="circle-icons hvr-grow">
-            <a href="http://www.twitter.com/EMDUBBdesign" target="blank" title="Follow on Twitter">
-            <i class="fa fa-twitter"></i>
-            </a>
-          </li>
-          <li class="circle-icons hvr-grow">
-            <a href="http://www.instagram.com/EM.DUBB" target="blank" title="Follow on Instagram">
-            <i class="fa fa-instagram"></i>
-            </a>
-          </li>
-          <li class="circle-icons hvr-grow">
-            <a href="http://www.linkedin.com/in/emdubb" target="blank" title="Follow on LinkedIn">
-            <i class="fa fa-linkedin"></i>
-            </a>
-          </li>
+          <a href="https://github.com/emdubb/" target="blank" class="hvr-grow" title="Follow on Github">
+            <li class="circle-icons">
+              <i class="fa fa-github"></i>
+            </li>
+          </a>
+          <a href="https://www.behance.net/emdubb" target="blank" class="hvr-grow" title="Follow on Behance">
+            <li class="circle-icons">
+              <i class="fa fa-behance"></i>
+            </li>
+          </a>
+          <a href="http://www.twitter.com/EMDUBBdesign" target="blank" class="hvr-grow" title="Follow on Twitter">
+            <li class="circle-icons">
+              <i class="fa fa-twitter"></i>
+            </li>
+          </a>
+          <a href="http://www.instagram.com/EM.DUBB" target="blank" class="hvr-grow" title="Follow on Instagram">
+            <li class="circle-icons">
+              <i class="fa fa-instagram"></i>
+            </li>
+          </a>
+          <a href="http://www.linkedin.com/in/emdubb" target="blank" class="hvr-grow" title="Follow on LinkedIn">
+            <li class="circle-icons">
+              <i class="fa fa-linkedin"></i>
+            </li>
+          </a>
         </ul>
       </div>
       <div class="col-md-6 category">

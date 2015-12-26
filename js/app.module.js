@@ -2,6 +2,6 @@
   "use strict"
 
   angular
-    .module('emdubb', ['ui.router']);
+    .module('emdubb', ['ui.router', 'ngAnimate']);
 
 })()
