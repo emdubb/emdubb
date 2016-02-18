@@ -12,6 +12,7 @@
     var vm = this;
     vm.work = workDataService;
     vm.setGroup = setGroup;
+    vm.showWork = showWork;
 
     vm.selectedGroup = '';
 
@@ -25,6 +26,10 @@
       } else {
         vm.selectedGroup = "all";
       }
+    }
+
+    function showWork(id){
+      $state.go('work', {'id': id})
     }
   }
 
