@@ -4,7 +4,7 @@
       <h1 class="text-uppercase">Designing an
       <div class="strong">Experience</div></h1>
       <h3>Creating beatiful user experiences in both print and digital platforms. </h3>
-      <a class="btn hvr-grow" href="#about" role="button">Let's get nerdy! &nbsp <i class="fa fa-angle-down"></i></a>
+      <!-- <a class="btn hvr-grow" href="#about" role="button">Let's get nerdy! &nbsp <i class="fa fa-angle-down"></i></a> -->
     </div>
   </div>
 </section>
@@ -16,7 +16,7 @@
       <div class="col-md-3 col-sm-6 col-xs-12 category">
         <i class="fa fa-code icon-o"></i>
         <h2>Full Stack Development</h2>
-        <p>I've got your back.
+        <p>We've got your back.
         <br>Front and back end development.</p>
       </div>
       <div class="col-md-3 col-sm-6 col-xs-12 category">
@@ -35,7 +35,7 @@
         <i class="fa fa-info icon-o"></i>
         <h2>Information Design</h2>
         <p>From wayfinding to documentation.
-        <br>I'll make your data sexy.</p>
+        <br>We'll make your data sexy.</p>
       </div>
     </div>
   </div>
@@ -49,7 +49,7 @@
     </div>
     <div class="col-md-6 category">
       <h2 class="text-uppercase">Meet the Madness</h2>
-      <p>Hey, there! My name’s Melissa and I am the designer behind EM DUBB. I’m a certified nerd and I speak geek. Geek, you ask? Yes, I am fluent in the world of interactive design and programming. I’ll build your design experience from the bottom up whether that means typing code, building branding, or designing user interactions. Let's build something together.</p>
+      <p>Hey, there! My name’s Melissa and I am the creator behind EM DUBB. I’m a certified nerd and I speak geek. Geek, you ask? Yes, I am fluent in the world of interactive design and programming. I’ll build your design experience from the bottom up whether that means typing code, building branding, or designing user interactions. Let's build something together.</p>
     </div>
   </div>
 </section>
@@ -57,6 +57,18 @@
 <section class="break"></section>
 
 <section id="work">
+<a name="work"></a>
+<div class="container">
+  <div class="row">
+    <div id="work-text" class="col-md-12">
+    Uh oh! I bet you're looking for some pretty cool work. This section is under construction and will be up and running shortly. Check back in a few days!
+    In the meantime checkout <a href="https://www.behance.net/emdubb" target="blank">Behance</a> or <a href="https://github.com/emdubb/" target="blank">Github</a> for examples.
+    </div>
+  </div>
+</div>
+</section>
+
+ <section id="work">
 <a name="work"></a>
   <div class="container">
     <div class="text-center filter-buttons">
@@ -66,7 +78,7 @@
       <button class="filter btn hvr-grow" ng-click="vm.setGroup(4)">All</button>
     </div>
     <div class="row">
-      <div class="col-md-3 col-sm-6 animate-repeat" ng-repeat="item in vm.work | workFilter:vm.selectedGroup">
+      <div class="col-md-3 col-sm-6 animate-repeat" ng-repeat="item in vm.work | workFilter:vm.selectedGroup" ng-click="vm.showWork(item.id)">
         <div class="work-item hvr-grow">
           <div ng-init="itemsrc = item.thumbUrl" ng-mouseover="itemsrc = item.thumbUrlroll" ng-mouseout="itemsrc = item.thumbUrl">
             <img ng-src="{{itemsrc}}" class="image-responsive work-image" alt="Work item"/>
@@ -80,6 +92,46 @@
 
 <section class="break"></section>
 
+<section id="contact">
+<a name="contact"></a>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 category text-center">
+        <h2 class="text-transform">Say Hello!</h2>
+        <p>Who doesn't love a friendly hello? Email me or say hi through social media with any questions, comments, concerns, haikus, jokes, etc. Talk to you soon!</p>
+        <ul class="list-row">
+          <a href="https://github.com/emdubb/" target="blank" class="hvr-grow" title="Follow on Github">
+            <li class="circle-icons">
+              <i class="fa fa-github"></i>
+            </li>
+          </a>
+          <a href="https://www.behance.net/emdubb" target="blank" class="hvr-grow" title="Follow on Behance">
+            <li class="circle-icons">
+              <i class="fa fa-behance"></i>
+            </li>
+          </a>
+          <a href="http://www.twitter.com/EMDUBBdesign" target="blank" class="hvr-grow" title="Follow on Twitter">
+            <li class="circle-icons">
+              <i class="fa fa-twitter"></i>
+            </li>
+          </a>
+          <a href="http://www.instagram.com/EM.DUBB" target="blank" class="hvr-grow" title="Follow on Instagram">
+            <li class="circle-icons">
+              <i class="fa fa-instagram"></i>
+            </li>
+          </a>
+          <a href="http://www.linkedin.com/in/emdubb" target="blank" class="hvr-grow" title="Follow on LinkedIn">
+            <li class="circle-icons">
+              <i class="fa fa-linkedin"></i>
+            </li>
+          </a>
+        </ul>
+        <a href="mailto:melissa@emdubb.co">melissa@emdubb.co</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!--
 <section id="contact">
 <a name="contact"></a>
   <div class="container">
@@ -134,7 +186,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <footer class="footer">
   <div class="footer-bottom">
