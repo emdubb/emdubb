@@ -5,7 +5,7 @@
     .module('emdubb')
     .config(AppRoutes);
 
-  AppRoutes = ["$stateProvider", "$urlRouterProvider"];
+  AppRoutes.$inject = ["$stateProvider", "$urlRouterProvider"];
 
   function AppRoutes($stateProvider, $urlRouterProvider) {
     $stateProvider
@@ -16,9 +16,11 @@
         controller: 'HomeController',
         controllerAs: 'vm'
       })
-      .state('river', {
-        url: '/uptheriver',
-        templateUrl: 'templates/river.html'
+      .state('work', {
+        url: '/work/:id',
+        templateUrl: 'templates/work.html',
+        controller: 'WorkController',
+        controllerAs: 'WorkCtrl'
       });
       // if none of the above states are matched, use this as the fallback
       $urlRouterProvider.otherwise('/');
