@@ -236,6 +236,12 @@ h3 {
   background-color: black;
 }
 
+#work-text {
+  height: 150px;
+  padding-top: 50px;
+  text-align: center;
+}
+
 #contact {
   background-color: white;
 }
