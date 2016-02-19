@@ -4,7 +4,7 @@ $(document).ready(function(){
 });
 
 $(window).one('scroll', function(){
-    $('body').css('background-image', 'url(../img/parallaxbg.jpg)');
+    $('.home').css('background-image', 'url(../img/parallaxbg.jpg)');
 });
 
 $(window).one('scroll', function(){
