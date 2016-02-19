@@ -1,1 +1,31 @@
-<h1>{{WorkCtrl.test}}</h1>
+<main class="work">
+  <div class="project-header" ng-style="{'background-image':'url({{WorkCtrl.work.cover}})'}">
+    <img ng-if="WorkCtrl.work.logo" src="{{WorkCtrl.work.logo}}" alt="">
+    <h1 ng-if="!WorkCtrl.work.logo" class="project-title">{{WorkCtrl.work.title}}</h1>
+  </div>
+
+  <div class="container work-summary">
+    <p>{{WorkCtrl.work.body}}</p>
+  </div>
+
+  <div class="container logos" ng-if="WorkCtrl.work.colImages">
+    <div class="row">
+      <div ng-repeat="image in WorkCtrl.work.colImages" class="col-md-4">
+        <img ng-src="{{image}}" alt="Design" class="img-responsive"/>
+      </div>
+    </div>
+  </div>
+
+  <div class="container full-image" ng-repeat="image in WorkCtrl.work.fullImages">
+    <img ng-src="{{image}}" alt="Portfolio Image" class="img-responsive">
+  </div>
+
+  <footer class="footer">
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="pull-left">© 2016 EM DUBB. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</main>
