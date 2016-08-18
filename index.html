@@ -34,7 +34,7 @@
 </head>
 <body ng-app="emdubb">
 <a id="top"></a>
-  <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+  <nav class="navbar navbar-default navbar-fixed-top navbar-inverse" ng-controller="ScrollController as ScrollCtrl">
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -47,9 +47,9 @@
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <li class="text-uppercase"><a href="#about">About</a></li>
-          <li class="text-uppercase"><a href="#work">Work</a></li>
-          <li class="text-uppercase"><a href="#contact">Contact</a></li>
+          <li class="text-uppercase" ng-click="gotoElement('about')"><a href="">About</a></li>
+          <li class="text-uppercase" ng-click="gotoElement('work')"><a href="">Work</a></li>
+          <li class="text-uppercase" ng-click="gotoElement('contact')"><a href="">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -59,8 +59,8 @@
     <!-- PAGE TEMPLATES -->
   </main>
 
-  <div class="circle-icons top hvr-grow">
-    <a href="#top" target="blank" title="Back to top">
+  <div class="circle-icons top hvr-grow" ng-controller="ScrollController as ScrollCtrl">
+    <a href="" ng-click="gotoElement('top')" title="Back to top">
     <i class="fa fa-angle-up"></i>
     </a>
   </div>
@@ -74,9 +74,20 @@
   <script src="/js/main.js"></script>
   <script src="/js/app.module.js"></script>
   <script src="/js/app.routes.js"></script>
+  <script src="/js/scroll.directive.js"></script>
   <script src="/js/work.dataservice.js"></script>
   <script src="/js/controllers/home.controller.js"></script>
   <script src="/js/controllers/work.controller.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-82773579-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
 </body>
 </html>

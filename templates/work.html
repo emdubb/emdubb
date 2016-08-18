@@ -1,11 +1,18 @@
 <main class="work">
   <div class="project-header" ng-style="{'background-image':'url({{WorkCtrl.work.cover}})'}">
-    <img ng-if="WorkCtrl.work.logo" src="{{WorkCtrl.work.logo}}" alt="">
-    <h1 ng-if="!WorkCtrl.work.logo" class="project-title">{{WorkCtrl.work.title}}</h1>
+    <!-- <img ng-if="WorkCtrl.work.logo" src="{{WorkCtrl.work.logo}}" alt="" class="header-img"> -->
+    <h1 class="project-title">{{WorkCtrl.work.title}}</h1>
+    <p class="project-subhead">
+      <span ng-if="WorkCtrl.work.development"><i class="fa fa-code"></i> &nbsp Development &nbsp &nbsp &nbsp </span>
+      <span ng-if="WorkCtrl.work.interactive"><i class="fa fa-sitemap"></i> &nbsp Interactive &nbsp &nbsp &nbsp </span>
+      <span ng-if="WorkCtrl.work.print"><i class="fa fa-pencil"></i> &nbsp Print</span>
+    </p>
   </div>
 
   <div class="container work-summary">
     <p>{{WorkCtrl.work.body}}</p>
+    <p ng-if="WorkCtrl.work.github"><i class="fa fa-github fa-lg"></i> View the project on <a href="{{WorkCtrl.work.github}}" target="blank">GitHub</a></p>
+    <p ng-if="WorkCtrl.work.behance"><i class="fa fa-behance fa-lg"></i> View the project on <a href="{{WorkCtrl.work.behance}}" target="blank">Behance</a></p>
   </div>
 
   <div class="container logos" ng-if="WorkCtrl.work.colImages">

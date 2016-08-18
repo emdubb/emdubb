@@ -57,17 +57,16 @@
 
 <section class="break"></section>
 
- <section id="work">
+<section id="work" resize notifier="notifyServiceOnChange(params)">
 <a name="work"></a>
   <div class="container">
-    <div class="text-center filter-buttons">
+    <div class="text-center filter-buttons row">
       <button class="filter btn hvr-grow" ng-click="vm.setGroup(1)">Development</button>
       <button class="filter btn hvr-grow" ng-click="vm.setGroup(2)">Interactive</button>
       <button class="filter btn hvr-grow" ng-click="vm.setGroup(3)">Print</button>
       <button class="filter btn hvr-grow" ng-click="vm.setGroup(4)">All</button>
     </div>
-
-    <div class="row" resize notifier="notifyServiceOnChange(params)">
+    <div class="row">
       <div class="col-md-3 col-sm-6 animate-repeat" ng-repeat-start="item in vm.work | workFilter:vm.selectedGroup" ng-click="vm.showWork(item.id)">
         <div class="work-item hvr-grow">
           <div ng-init="itemsrc = item.thumbUrl" ng-mouseover="itemsrc = item.thumbUrlroll" ng-mouseout="itemsrc = item.thumbUrl">

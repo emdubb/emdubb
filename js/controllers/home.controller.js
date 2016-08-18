@@ -3,34 +3,34 @@
 
   angular
     .module("emdubb")
-    .controller("HomeController", HomeController)
     .filter("workFilter", workFilter)
+    .controller("HomeController", HomeController)
     .directive('resize', function ($window) {
-        return function (scope, element, attr) {
+      return function (scope, element, attr) {
 
-            var w = angular.element($window);
-            scope.$watch(function () {
-                return {
-                    'h': window.innerHeight,
-                    'w': window.innerWidth
-                };
-            }, function (newValue, oldValue) {
-                scope.windowHeight = newValue.h;
-                scope.windowWidth = newValue.w;
+        var w = angular.element($window);
+        scope.$watch(function () {
+          return {
+            'h': window.innerHeight,
+            'w': window.innerWidth
+          };
+      }, function (newValue, oldValue) {
+          scope.windowHeight = newValue.h;
+          scope.windowWidth = newValue.w;
 
-                scope.resizeWithOffset = function (offsetH) {
-                    scope.$eval(attr.notifier);
-                    return {
-                        'height': (newValue.h - offsetH) + 'px'
-                    };
-                };
+          scope.resizeWithOffset = function (offsetH) {
+            scope.$eval(attr.notifier);
+            return {
+                'height': (newValue.h - offsetH) + 'px'
+            };
+          };
 
-            }, true);
+      }, true);
 
-            w.bind('resize', function () {
-                scope.$apply();
-            });
-        }
+        w.bind('resize', function () {
+          scope.$apply();
+        });
+      }
     });
 
   HomeController.$inject = ["$log", "$state", "$window", "$scope", "workDataService"];
@@ -61,38 +61,8 @@
     function showWork(id){
       $state.go('work', {'id': id})
     }
+
   }
-
-  // resizeDirective.$inject = ["$window"]
-
-
-  // function resizeDirective($window) {
-  //   return function (scope, element) {
-  //       var w = angular.element($window);
-  //       scope.getWindowDimensions = function () {
-  //           return {
-  //               'h': w.height(),
-  //               'w': w.width()
-  //           };
-  //       };
-  //       scope.$watch(scope.getWindowDimensions, function (newValue, oldValue) {
-  //           scope.windowHeight = newValue.h;
-  //           scope.windowWidth = newValue.w;
-
-  //           scope.style = function () {
-  //               return {
-  //                   'height': (newValue.h - 100) + 'px',
-  //                       'width': (newValue.w - 100) + 'px'
-  //               };
-  //           };
-
-  //       }, true);
-
-  //       w.bind('resizeDirective', function () {
-  //           scope.$apply();
-  //       });
-  //   }
-  // }
 
   workFilter.$inject = ["$log"];
 
