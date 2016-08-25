@@ -196,12 +196,31 @@ h3 {
   height: 250px;
 }
 
-#work {
+.work {
   background-color: white;
 }
 
+.logo-padding {
+  padding: 0 0 50px;
+}
+
+.logo-grid {
+  display: block;
+  margin: 30px 0;
+}
+
+.center-image {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.header-padding {
+  padding: 80px 0 5px;
+}
+
 .filter-buttons {
-  margin: 8% 4% 0 0;
+  margin: 4% 0 0 0;
 }
 
 .filter-buttons .btn {
@@ -349,6 +368,25 @@ main .work {
   text-align: center;
 }
 
+@media (max-width: 1000px) {
+  .center-image {
+    margin: 30px auto;
+    width: 60%;
+  }
+
+  #sas {
+    margin-top: -40px;
+  }
+
+  #aea {
+    margin-top: 50px;
+  }
+
+  .logo-grid {
+    padding: 0;
+  }
+}
+
 @media (max-width: 800px) {
   nav {
     padding: 0;
@@ -365,6 +403,10 @@ main .work {
   .header-img {
     margin-top: 0px;
   }
+
+/*  .center-image {
+    margin: 30px auto;
+  }*/
 
   #header-content {
     margin-top: 35%;
