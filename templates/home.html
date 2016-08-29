@@ -57,8 +57,34 @@
 
 <section class="break"></section>
 
-<section class="work" id="work">
-<a name="work"></a>
+<section class="work" id="work" resize notifier="notifyServiceOnChange(params)">
+  <div class="container">
+    <h1 class="text-center text-uppercase header-padding">Our Favorite Works</h1>
+    <div class="text-center filter-buttons row">
+      <button class="filter btn hvr-grow" ng-click="vm.setGroup(1)">Development</button>
+      <button class="filter btn hvr-grow" ng-click="vm.setGroup(2)">Interactive</button>
+      <button class="filter btn hvr-grow" ng-click="vm.setGroup(3)">Print</button>
+      <button class="filter btn hvr-grow" ng-click="vm.setGroup(4)">All</button>
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-sm-6 animate-repeat" ng-repeat-start="item in vm.work | workFilter:vm.selectedGroup" ng-click="vm.showWork(item.id)">
+        <div class="work-item hvr-grow">
+          <div ng-init="itemsrc = item.thumbUrl" ng-mouseover="itemsrc = item.thumbUrlroll" ng-mouseout="itemsrc = item.thumbUrl">
+            <img ng-src="{{itemsrc}}" class="image-responsive work-image" alt="Work item"/>
+          </div>
+          <h2 class="work-title text-uppercase text-center">{{item.title}}</h2>
+        </div>
+      </div>
+      <div class="clearfix" ng-if="$index%4==3 || ($index%2==1 && windowWidth < 990)"></div>
+      <div ng-repeat-end=""></div>
+    </div>
+  </div>
+</section>
+
+<section class="break"></section>
+
+<section class="work">
+  <a name="work"></a>
   <div class="container">
     <h1 class="text-center header-padding text-uppercase">Companies That Love Us</h1>
     <h2 class="text-center logo-padding">And we love too!</h2>
@@ -105,32 +131,6 @@
           <img src="img/logos/ab.png" alt="airberlin Logo" class="center-image logo-image">
         </a>
       </div>
-    </div>
-  </div>
-  </section>
-
-  <section class="break"></section>
-
-  <section class="work" resize notifier="notifyServiceOnChange(params)">
-  <div class="container">
-    <h1 class="text-center text-uppercase header-padding">Our Favorite Works</h1>
-    <div class="text-center filter-buttons row">
-      <button class="filter btn hvr-grow" ng-click="vm.setGroup(1)">Development</button>
-      <button class="filter btn hvr-grow" ng-click="vm.setGroup(2)">Interactive</button>
-      <button class="filter btn hvr-grow" ng-click="vm.setGroup(3)">Print</button>
-      <button class="filter btn hvr-grow" ng-click="vm.setGroup(4)">All</button>
-    </div>
-    <div class="row">
-      <div class="col-md-3 col-sm-6 animate-repeat" ng-repeat-start="item in vm.work | workFilter:vm.selectedGroup" ng-click="vm.showWork(item.id)">
-        <div class="work-item hvr-grow">
-          <div ng-init="itemsrc = item.thumbUrl" ng-mouseover="itemsrc = item.thumbUrlroll" ng-mouseout="itemsrc = item.thumbUrl">
-            <img ng-src="{{itemsrc}}" class="image-responsive work-image" alt="Work item"/>
-          </div>
-          <h2 class="work-title text-uppercase text-center">{{item.title}}</h2>
-        </div>
-      </div>
-      <div class="clearfix" ng-if="$index%4==3 || ($index%2==1 && windowWidth < 990)"></div>
-      <div ng-repeat-end=""></div>
     </div>
   </div>
 </section>
